@@ -51,6 +51,7 @@ Clone the project or download it and put it in any directory you want.
 ### Setup the Scraper
 
 Edit your sites in the `SITES` const in `scraper.py`. The slug is for saving them in INI sections.
+Edit the other consts with your gmail user and pass (Yagmail uses gmail to send, please remember to make your account "less secure" in order to use SMTP without google API) and the email(s) you want to be notified at in the `send_mail` function.
 
 ```bash
 # Create a virtualenv and source it
@@ -122,3 +123,5 @@ server {
     }
 }
 ```
+
+If everything is working, point your browser at `http://yourserverip/` and it should show "up", and `http://yourserverip/priceview` to see the output of the scrape. You can configure the route you want to check your prices at in `app.py`, in the decorator `/priceview/`.
